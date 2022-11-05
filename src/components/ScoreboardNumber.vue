@@ -1,12 +1,12 @@
 <template>
 	<div class="ScoreboardNumber">
-		<div class="number-bar top" :class="{active: top}">&nbsp;</div>
-		<div class="number-bar upper-left" :class="{active: upperLeft}">&nbsp;</div>
-		<div class="number-bar upper-right" :class="{active: upperRight}">&nbsp;</div>
-		<div class="number-bar middle" :class="{active: middle}">&nbsp;</div>
-		<div class="number-bar lower-left" :class="{active: lowerLeft}">&nbsp;</div>
-		<div class="number-bar lower-right" :class="{active: lowerRight}">&nbsp;</div>
-		<div class="number-bar bottom" :class="{active: bottom}">&nbsp;</div>
+		<div class="number-bar top" :class="{active: top}" />
+		<div class="number-bar upper-left" :class="{active: upperLeft}" />
+		<div class="number-bar upper-right" :class="{active: upperRight}" />
+		<div class="number-bar middle" :class="{active: middle}" />
+		<div class="number-bar lower-left" :class="{active: lowerLeft}" />
+		<div class="number-bar lower-right" :class="{active: lowerRight}" />
+		<div class="number-bar bottom" :class="{active: bottom}" />
 	</div>
 </template>
 
