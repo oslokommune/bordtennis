@@ -68,11 +68,13 @@ export default {
 }
 
 .Scoreboard {
+	max-height: 40%;
 	height: 50%;
 	width: 100%;
 }
 
 .controls {
+	max-height: 20%;
 	width: 100%;
 	margin-top: 2em;
 
