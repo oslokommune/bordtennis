@@ -3,8 +3,8 @@
 		<Scoreboard :playerOne="playerOne" :playerTwo="playerTwo" />
 
 		<div class="controls">
-			<button @click="playerOne++">Player One</button>
-			<button @click="playerTwo++">Player Two</button>
+			<button @click="bumpPlayerOne">Player One</button>
+			<button @click="bumpPlayerTwo">Player Two</button>
 			<button class="btn-reset" @click="reset">Reset</button>
 		</div>
 	</div>
@@ -21,8 +21,31 @@ export default {
 	data: () => ({
 		playerOne: 0,
 		playerTwo: 0,
+		wait: false,
 	}),
 	methods: {
+		bumpPlayerOne() {
+			if (this.wait) return
+
+			this.wait = true
+
+			setTimeout(() => {
+				this.wait = false
+			}, 100)
+
+			this.playerOne++
+		},
+		bumpPlayerTwo() {
+			if (this.wait) return
+
+			this.wait = true
+
+			setTimeout(() => {
+				this.wait = false
+			}, 100)
+
+			this.playerTwo++
+		},
 		reset() {
 			this.playerOne = 0
 			this.playerTwo = 0
