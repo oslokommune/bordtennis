@@ -34,6 +34,9 @@ export default {
 
 <style scoped>
 #app {
+	width: 100%;
+	padding: 1em 25%;
+
 	display: flex;
 	flex-direction: column;
 
@@ -42,12 +45,13 @@ export default {
 }
 
 .Scoreboard {
-	height: 100px;
-	width: 256px;
+	height: 50%;
+	width: 100%;
 }
 
 .controls {
-	margin-top: 5em;
+	width: 100%;
+	margin-top: 2em;
 
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -62,6 +66,6 @@ export default {
 
 button {
 	font-size: 1.5em;
-	padding: 0.5em 1em;
+	padding: 1em 1em;
 }
 </style>

@@ -54,12 +54,13 @@ export default {
 
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 	justify-content: space-between;
 }
 
 .player-side {
 	height: 100%;
-	width: 45%;
+	width: 40%;
 
 	display: flex;
 	flex-direction: row;
@@ -67,6 +68,6 @@ export default {
 }
 
 .ScoreboardNumber {
-	width: 45%;
+	width: 40%;
 }
 </style>
