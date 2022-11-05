@@ -3,6 +3,12 @@ name: Deploy
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - '**.js'
+      - '**.html'
+      - '**.vue'
+      - 'package.json'
+      - 'package-lock.json'
   workflow_dispatch: {}
 
 jobs:
