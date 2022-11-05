@@ -74,7 +74,7 @@ export default {
 }
 
 .controls {
-	max-height: 20%;
+	max-height: 40%;
 	width: 100%;
 	margin-top: 2em;
 
