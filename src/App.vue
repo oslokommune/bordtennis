@@ -33,6 +33,12 @@ export default {
 				this.wait = false
 			}, 100)
 
+			if (this.playerOne == 99) {
+				this.playerOne = 0
+
+				return
+			}
+
 			this.playerOne++
 		},
 		bumpPlayerTwo() {
@@ -43,6 +49,12 @@ export default {
 			setTimeout(() => {
 				this.wait = false
 			}, 100)
+
+			if (this.playerTwo == 99) {
+				this.playerTwo = 0
+
+				return
+			}
 
 			this.playerTwo++
 		},
