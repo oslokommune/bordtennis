@@ -1,44 +1,23 @@
 <script>
-import ScoreboardNumber from './components/ScoreboardNumber.vue'
+import Scoreboard from './components/Scoreboard.vue'
 
 export default {
 	name: 'App',
 	components: {
-		ScoreboardNumber,
+		Scoreboard,
 	},
-	data() {
-		return {
-			message: 'Hello Vue!'
-		}
-	}
+	data: () => ({
+		playerOne: 0,
+		playerTwo: 0,
+	}),
 }
 </script>
 
 <template>
-	<div class="player-side">
-		<ScoreboardNumber :number="0" />
-		<ScoreboardNumber :number="0" />
-	</div>
-
-	<div class="player-side">
-		<ScoreboardNumber :number="0" />
-		<ScoreboardNumber :number="0" />
+	<div id="app">
+		<Scoreboard :playerOne="playerOne" :playerTwo="playerTwo" />
 	</div>
 </template>
 
 <style scoped>
-.ScoreboardNumber {
-	height: 100%;
-
-	width: 48%;
-}
-
-.player-side {
-	height: 100%;
-	width: 45%;
-
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
 </style>

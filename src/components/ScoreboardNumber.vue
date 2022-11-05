@@ -1,12 +1,12 @@
 <template>
 	<div class="ScoreboardNumber">
-		<div class="top" :class="{active: top}">&nbsp;</div>
-		<div class="upper-left" :class="{active: upperLeft}">&nbsp;</div>
-		<div class="upper-right" :class="{active: upperRight}">&nbsp;</div>
-		<div class="middle" :class="{active: middle}">&nbsp;</div>
-		<div class="lower-left" :class="{active: lowerLeft}">&nbsp;</div>
-		<div class="lower-right" :class="{active: lowerRight}">&nbsp;</div>
-		<div class="bottom" :class="{active: bottom}">&nbsp;</div>
+		<div class="number-bar top" :class="{active: top}">&nbsp;</div>
+		<div class="number-bar upper-left" :class="{active: upperLeft}">&nbsp;</div>
+		<div class="number-bar upper-right" :class="{active: upperRight}">&nbsp;</div>
+		<div class="number-bar middle" :class="{active: middle}">&nbsp;</div>
+		<div class="number-bar lower-left" :class="{active: lowerLeft}">&nbsp;</div>
+		<div class="number-bar lower-right" :class="{active: lowerRight}">&nbsp;</div>
+		<div class="number-bar bottom" :class="{active: bottom}">&nbsp;</div>
 	</div>
 </template>
 
@@ -35,6 +35,9 @@ export default {
 		lowerRight: true,
 		bottom: true,
 	}),
+	mounted() {
+		SetNumber(this, this.number);
+	}
 }
 </script>
 
@@ -48,6 +51,11 @@ export default {
 
 	column-gap: 0;
 	row-gap: 0;
+}
+
+div.number-bar {
+	background-color: #3f3f3f;
+	border-radius: 3px;
 }
 
 div.active {
