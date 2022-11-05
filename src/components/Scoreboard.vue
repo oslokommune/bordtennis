@@ -65,4 +65,8 @@ export default {
 	flex-direction: row;
 	justify-content: space-between;
 }
+
+.ScoreboardNumber {
+	width: 45%;
+}
 </style>
