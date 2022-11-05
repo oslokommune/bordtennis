@@ -58,7 +58,7 @@ export default {
 <style scoped>
 #app {
 	width: 100%;
-	padding: 1em 25%;
+	padding: 0 0.5em;
 
 	display: flex;
 	flex-direction: column;
@@ -74,7 +74,6 @@ export default {
 }
 
 .controls {
-	max-height: 40%;
 	width: 100%;
 	margin-top: 2em;
 
