@@ -47,7 +47,7 @@ export default {
 	width: 100%;
 
 	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(9, 1fr);
+	grid-template-rows: repeat(12, 1fr);
 
 	column-gap: 0;
 	row-gap: 0;
@@ -64,36 +64,36 @@ div.active {
 
 div.top {
 	grid-column: 2 / 5;
-	grid-row: 1;
+	grid-row: 1 / 3;
 }
 
 div.upper-left {
 	grid-column: 1;
-	grid-row: 2 / 5;
+	grid-row: 3 / 6;
 }
 
 div.upper-right {
 	grid-column: 5;
-	grid-row: 2 / 5;
+	grid-row: 3 / 6;
 }
 
 div.middle {
 	grid-column: 2 / 5;
-	grid-row: 5;
+	grid-row: 6 / 8;
 }
 
 div.lower-left {
 	grid-column: 1;
-	grid-row: 6 / 9;
+	grid-row: 8 / 11;
 }
 
 div.lower-right {
 	grid-column: 5;
-	grid-row: 6 / 9;
+	grid-row: 8 / 11;
 }
 
 div.bottom {
 	grid-column: 2 / 5;
-	grid-row: 9;
+	grid-row: 11 / 13;
 }
 </style>

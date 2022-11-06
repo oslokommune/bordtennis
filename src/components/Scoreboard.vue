@@ -52,6 +52,8 @@ export default {
 	height: 100%;
 	width: 100%;
 
+	min-height: 124px;
+
 	display: flex;
 	flex-direction: row;
 	align-items: center;

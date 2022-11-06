@@ -70,16 +70,12 @@ export default {
 <style scoped>
 #app {
 	width: 100%;
-	padding: 2em 6em;
+	padding: 2em 1em;
 
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-}
-
-.Scoreboard {
-	width: 100%;
 }
 
 .controls {
@@ -97,32 +93,12 @@ export default {
 	grid-column: 1 / 3;
 }
 
-button {
-	font-size: 1.5em;
-	padding: 1em 1em;
-}
-
-@media only screen
-and (min-device-width : 320px) {
-	#app {
-		padding: 1em;
-	}
-}
-
 @media only screen
 and (min-device-width : 320px)
 and (orientation : landscape) {
-	.Scoreboard {
-		height: 60%;
-	}
-
-	.controls {
-		height: 30%;
-	}
-
 	button {
-		font-size: 1em;
-		padding: 2em;
+		font-size: 1.5em;
+		padding: 1em;
 	}
 }
 
@@ -130,10 +106,6 @@ and (orientation : landscape) {
 @media only screen
 and (min-device-width : 320px)
 and (orientation : portrait) {
-	#app {
-		padding: 2em 1em;
-	}
-
 	.Scoreboard {
 		height: 20%;
 	}
