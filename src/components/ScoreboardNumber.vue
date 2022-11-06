@@ -46,8 +46,8 @@ export default {
 	display: grid;
 	width: 100%;
 
-	grid-template-columns: 14% 72% 14%;
-	grid-template-rows: 14% 29% 14% 29% 14%;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(9, 1fr);
 
 	column-gap: 0;
 	row-gap: 0;
@@ -55,7 +55,7 @@ export default {
 
 div.number-bar {
 	background-color: #3f3f3f;
-	border-radius: 3px;
+	border-radius: 2px;
 }
 
 div.active {
@@ -63,37 +63,37 @@ div.active {
 }
 
 div.top {
-	grid-column: 2;
+	grid-column: 2 / 5;
 	grid-row: 1;
 }
 
 div.upper-left {
 	grid-column: 1;
-	grid-row: 2;
+	grid-row: 2 / 5;
 }
 
 div.upper-right {
-	grid-column: 3;
-	grid-row: 2;
+	grid-column: 5;
+	grid-row: 2 / 5;
 }
 
 div.middle {
-	grid-column: 2;
-	grid-row: 3;
+	grid-column: 2 / 5;
+	grid-row: 5;
 }
 
 div.lower-left {
 	grid-column: 1;
-	grid-row: 4;
+	grid-row: 6 / 9;
 }
 
 div.lower-right {
-	grid-column: 3;
-	grid-row: 4;
+	grid-column: 5;
+	grid-row: 6 / 9;
 }
 
 div.bottom {
-	grid-column: 2;
-	grid-row: 5;
+	grid-column: 2 / 5;
+	grid-row: 9;
 }
 </style>

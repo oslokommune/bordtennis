@@ -126,5 +126,9 @@ and (orientation : portrait) {
 	#app {
 		padding: 10% 20%;
 	}
+
+	.Scoreboard {
+		height: 40%;
+	}
 }
 </style>
