@@ -23,4 +23,4 @@ See [here](./docs/technologies/pre-commit.md) for more details.
 1. `npm run dev`
 2. Open link presented in terminal
 
-See [here](./docs/technologies/vite) for more details.
+See [here](./docs/technologies/vite.md) for more details.
