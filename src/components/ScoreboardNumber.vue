@@ -46,8 +46,8 @@ export default {
 	display: grid;
 	width: 100%;
 
-	grid-template-columns: 9% 78% 11%;
-	grid-template-rows: 4% 44% 4% 44% 4%;
+	grid-template-columns: 14% 72% 14%;
+	grid-template-rows: 14% 29% 14% 29% 14%;
 
 	column-gap: 0;
 	row-gap: 0;
