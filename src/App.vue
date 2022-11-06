@@ -3,8 +3,8 @@
 		<Scoreboard :playerOne="playerOne" :playerTwo="playerTwo" />
 
 		<div class="controls">
-			<button @click="bumpPlayerOne">Player One</button>
-			<button @click="bumpPlayerTwo">Player Two</button>
+			<button @click="bumpPlayerOne">Team Tim</button>
+			<button @click="bumpPlayerTwo">Team Kim</button>
 			<button class="btn-reset" @click="reset">Reset</button>
 		</div>
 	</div>
