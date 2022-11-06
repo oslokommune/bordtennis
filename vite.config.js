@@ -3,6 +3,6 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	base: 'https://bordtennis.oslo.systems/',
-  plugins: [vue()]
+  base: 'https://bordtennis.oslo.systems/',
+  plugins: [vue()],
 })
