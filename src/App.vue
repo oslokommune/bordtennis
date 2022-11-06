@@ -70,7 +70,7 @@ export default {
 <style scoped>
 #app {
 	width: 100%;
-	padding: 0 0.5em;
+	padding: 2em 6em;
 
 	display: flex;
 	flex-direction: column;
@@ -80,8 +80,6 @@ export default {
 }
 
 .Scoreboard {
-	max-height: 40%;
-	height: 50%;
 	width: 100%;
 }
 
@@ -103,5 +101,30 @@ export default {
 button {
 	font-size: 1.5em;
 	padding: 1em 1em;
+}
+
+/* Mobile portrait */
+@media only screen
+and (min-device-width : 320px)
+and (orientation : portrait) {
+	#app {
+		justify-content: space-between;
+	}
+
+	.Scoreboard {
+		height: 20%;
+	}
+
+	button {
+		font-size: 1em;
+		padding: 2em 0.5em;
+	}
+}
+
+/* Desktop */
+@media only screen and (min-width: 992px) {
+	#app {
+		padding: 10% 20%;
+	}
 }
 </style>
