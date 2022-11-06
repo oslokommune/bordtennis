@@ -65,6 +65,11 @@ export default {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+
+	border: 4px solid #3f3f3f;
+	border-radius: 4px;
+
+	padding: 2em;
 }
 
 .ScoreboardNumber {

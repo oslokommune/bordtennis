@@ -74,8 +74,7 @@ export default {
 
 	display: flex;
 	flex-direction: column;
-
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 }
 
@@ -103,12 +102,36 @@ button {
 	padding: 1em 1em;
 }
 
+@media only screen
+and (min-device-width : 320px) {
+	#app {
+		padding: 1em;
+	}
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (orientation : landscape) {
+	.Scoreboard {
+		height: 60%;
+	}
+
+	.controls {
+		height: 30%;
+	}
+
+	button {
+		font-size: 1em;
+		padding: 2em;
+	}
+}
+
 /* Mobile portrait */
 @media only screen
 and (min-device-width : 320px)
 and (orientation : portrait) {
 	#app {
-		justify-content: space-between;
+		padding: 2em 1em;
 	}
 
 	.Scoreboard {
@@ -125,6 +148,8 @@ and (orientation : portrait) {
 @media only screen and (min-width: 992px) {
 	#app {
 		padding: 10% 20%;
+
+		justify-content: center;
 	}
 
 	.Scoreboard {
