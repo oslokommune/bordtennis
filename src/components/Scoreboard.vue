@@ -61,8 +61,10 @@ export default {
 }
 
 .player-side {
-	height: 100%;
 	width: 40%;
+	height: 100%;
+
+	padding: 1em;
 
 	display: flex;
 	flex-direction: row;
@@ -70,11 +72,20 @@ export default {
 
 	border: 4px solid #3f3f3f;
 	border-radius: 4px;
-
-	padding: 2em;
 }
 
-.ScoreboardNumber {
-	width: 40%;
+/* Desktop */
+@media only screen and (min-width: 992px) {
+	.player-side {
+		padding: 2em;
+	}
+
+	.ScoreboardNumber {
+		width: 40%;
+	}
+}
+
+.ScoreboardNumber:not(:last-child) {
+	margin-right: 2em;
 }
 </style>

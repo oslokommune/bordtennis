@@ -43,8 +43,10 @@ export default {
 
 <style scoped>
 .ScoreboardNumber {
-	display: grid;
+	height: 100%;
 	width: 100%;
+
+	display: grid;
 
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: repeat(12, 1fr);
