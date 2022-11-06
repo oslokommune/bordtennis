@@ -62,38 +62,41 @@ div.active {
 	background-color: red;
 }
 
-div.top {
+div.top,
+div.middle,
+div.bottom {
 	grid-column: 2 / 5;
+}
+
+div.upper-left,
+div.lower-left {
+	grid-column: 1;
+}
+
+div.upper-right,
+div.lower-right {
+	grid-column: 5;
+}
+
+div.upper-left,
+div.upper-right {
+	grid-row: 3 / 6;
+}
+
+div.lower-left,
+div.lower-right {
+	grid-row: 8 / 11;
+}
+
+div.top {
 	grid-row: 1 / 3;
 }
 
-div.upper-left {
-	grid-column: 1;
-	grid-row: 3 / 6;
-}
-
-div.upper-right {
-	grid-column: 5;
-	grid-row: 3 / 6;
-}
-
 div.middle {
-	grid-column: 2 / 5;
 	grid-row: 6 / 8;
 }
 
-div.lower-left {
-	grid-column: 1;
-	grid-row: 8 / 11;
-}
-
-div.lower-right {
-	grid-column: 5;
-	grid-row: 8 / 11;
-}
-
 div.bottom {
-	grid-column: 2 / 5;
 	grid-row: 11 / 13;
 }
 </style>
