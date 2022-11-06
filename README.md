@@ -14,15 +14,9 @@ The new table tennis table arrived. We needed a scoreboard.
 - [Vue](https://vuejs.org/)
 - [Github Pages](https://pages.github.com/)
 
-## Prerequisites
+## Contribute
 
-- Node 16.x
-
-## Start development server
-
-1. `npm install`
-2. `npm run dev`
-3. Open link presented in terminal
+See [CONTRIBUTING.md](./CONTRIBUTING.md)
 
 ## Production pipeline
 
