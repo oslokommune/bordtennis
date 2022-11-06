@@ -119,13 +119,17 @@ and (orientation : portrait) {
 /* Desktop */
 @media only screen and (min-width: 992px) {
 	#app {
-		padding: 10% 20%;
+		padding: 8% 20%;
 
 		justify-content: center;
 	}
 
 	.Scoreboard {
-		height: 40%;
+		height: 60%;
+	}
+
+	.controls {
+		margin-top: 10em;
 	}
 }
 </style>
