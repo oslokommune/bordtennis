@@ -1,11 +1,11 @@
 <template>
   <div class="Scoreboard">
-    <div class="player-side">
+    <div class="player-side" @click.capture="$emit('bump', { team: 1 })">
       <ScoreboardNumber :number="playerOneMajor" />
       <ScoreboardNumber :number="playerOneMinor" />
     </div>
 
-    <div class="player-side">
+    <div class="player-side" @click.capture="$emit('bump', { team: 2 })">
       <ScoreboardNumber :number="playerTwoMajor" />
       <ScoreboardNumber :number="playerTwoMinor" />
     </div>
