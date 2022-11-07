@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="Standard">
     <Scoreboard :playerOne="playerOne" :playerTwo="playerTwo" />
 
     <div class="serve-indicator">
@@ -87,7 +87,7 @@ export default {
 </script>
 
 <style scoped>
-#app {
+.Standard {
   width: 100%;
   padding: 2em 1em;
 
