@@ -4,8 +4,8 @@ import Standard from './views/Standard.vue'
 import Dashboard from './views/Dashboard.vue'
 
 const routes = [
-  { path: '/', component: Standard },
-  { path: '/dashboard', component: Dashboard },
+  { path: '/', component: Dashboard },
+  { path: '/old', component: Standard },
 ]
 
 const router = createRouter({
