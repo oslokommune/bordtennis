@@ -46,6 +46,7 @@ export default {
         this.wait = false
       }, 100)
 
+      this.$refs.audio.fastSeek(0)
       this.$refs.audio.play()
 
       if (navigator.vibrate) {
