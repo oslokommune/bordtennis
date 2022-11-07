@@ -2,6 +2,17 @@
   <div id="app">
     <Scoreboard :playerOne="playerOne" :playerTwo="playerTwo" />
 
+    <div class="serve-indicator">
+      <div
+        class="indicator"
+        :class="{ 'active-indicator': servingPlayer == 1 }"
+      />
+      <div
+        class="indicator"
+        :class="{ 'active-indicator': servingPlayer == 2 }"
+      />
+    </div>
+
     <div class="controls">
       <button @click="bumpPlayerOne">Team Tim</button>
       <button @click="bumpPlayerTwo">Team Kim</button>
@@ -12,11 +23,19 @@
 
 <script>
 import Scoreboard from './components/Scoreboard.vue'
-
 export default {
   name: 'App',
   components: {
     Scoreboard,
+  },
+  computed: {
+    servingPlayer() {
+      let sum = this.playerOne + this.playerTwo
+
+      let mod = sum % 4
+
+      return mod === 0 || mod == 1 ? 1 : 2
+    },
   },
   data: () => ({
     playerOne: 0,
@@ -92,6 +111,28 @@ export default {
   grid-column: 1 / 3;
 }
 
+div.serve-indicator {
+  height: 100%;
+  width: 100%;
+  margin-top: 1em;
+
+  align-self: flex-end;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+div.indicator {
+  width: 25px;
+  height: 25px;
+
+  border-radius: 4;
+}
+
+div.active-indicator {
+  background-color: red;
+}
+
 @media only screen and (min-device-width: 320px) and (orientation: landscape) {
   button {
     font-size: 1.5em;
@@ -119,12 +160,8 @@ export default {
     justify-content: center;
   }
 
-  .Scoreboard {
-    height: 60%;
-  }
-
-  .controls {
-    margin-top: 10em;
+  .serve-indicator {
+    flex-shrink: 2;
   }
 }
 </style>
