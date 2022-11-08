@@ -51,11 +51,11 @@ export default {
         this.wait = false
       }, 100)
 
-      this.$refs.audio.fastSeek(0)
+      this.$refs.audio.currentTime = 0
       this.$refs.audio.play()
 
       if (navigator.vibrate) {
-        navigator.vibrate([200])
+        navigator.vibrate([100])
       } else {
         alert('Vibrate not supported')
       }
@@ -69,7 +69,7 @@ export default {
       this.teamTwo = this.teamTwo === 99 ? 0 : this.teamTwo + 1
     },
     switchServer() {
-      this.$refs.audioBell.fastSeek(0)
+      this.$refs.audioBell.currentTime = 0
       this.$refs.audioBell.play()
     },
     reset() {
