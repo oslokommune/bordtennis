@@ -7,9 +7,12 @@
     </div>
 
     <Scoreboard @bump="bump" :playerOne="teamOne" :playerTwo="teamTwo" />
-    <ServeIndicator :sumPoints="sumPoints" />
+    <ServeIndicator @change="switchServer" :sumPoints="sumPoints" />
 
     <audio ref="audio" :src="coinSound" />
+
+    <!-- Following sound Effect from https://pixabay.com/sound-effects/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=14610" -->
+    <audio ref="audioBell" :src="serveBell" />
   </div>
 </template>
 
@@ -18,6 +21,7 @@ import Scoreboard from '../components/Scoreboard.vue'
 import ServeIndicator from '../components/ServeIndicator.vue'
 
 import coinSound from '../assets/coin.mp3'
+import serveBell from '../assets/service-bell.mp3'
 
 export default {
   name: 'Dashboard',
@@ -32,6 +36,7 @@ export default {
   },
   data: () => ({
     coinSound,
+    serveBell,
     teamOne: 0,
     teamTwo: 0,
     wait: false,
@@ -62,6 +67,10 @@ export default {
       }
 
       this.teamTwo = this.teamTwo === 99 ? 0 : this.teamTwo + 1
+    },
+    switchServer() {
+      this.$refs.audioBell.fastSeek(0)
+      this.$refs.audioBell.play()
     },
     reset() {
       this.teamOne = 0

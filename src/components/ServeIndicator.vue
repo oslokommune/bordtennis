@@ -2,12 +2,12 @@
   <div class="ServeIndicator">
     <div
       class="indicator"
-      :class="{ 'active-indicator': servingPlayer == 1 }"
+      :class="{ 'active-indicator': currentServingPlayer == 1 }"
       @click="toggleInitialServer"
     />
     <div
       class="indicator"
-      :class="{ 'active-indicator': servingPlayer == 2 }"
+      :class="{ 'active-indicator': currentServingPlayer == 2 }"
       @click="toggleInitialServer"
     />
   </div>
@@ -22,21 +22,22 @@ export default {
       required: true,
     },
   },
-  computed: {
-    servingPlayer() {
-      let mod = this.sumPoints % 4
+  watch: {
+    sumPoints(currentSum) {
+      let servingPlayer = calculateServingPlayer(this.initialServer, currentSum)
 
-      let initial = mod === 0 || mod === 1
-
-      if (this.initialServer === 1) {
-        return initial ? 1 : 2
+      if (servingPlayer === this.currentServingPlayer) {
+        return
       }
 
-      return initial ? 2 : 1
+      this.currentServingPlayer = servingPlayer
+
+      this.$emit('change', this.currentServingPlayer)
     },
   },
   data: () => ({
     initialServer: 1,
+    currentServingPlayer: 1,
   }),
   methods: {
     toggleInitialServer(event) {
@@ -49,8 +50,21 @@ export default {
       }
 
       this.initialServer = this.initialServer === 1 ? 2 : 1
+      this.currentServingPlayer = this.initialServer
     },
   },
+}
+
+function calculateServingPlayer(initialServer, points) {
+  let mod = points % 4
+
+  let initial = mod === 0 || mod === 1
+
+  if (initialServer === 1) {
+    return initial ? 1 : 2
+  }
+
+  return initial ? 2 : 1
 }
 </script>
 
