@@ -21,7 +21,7 @@ import Scoreboard from '../components/Scoreboard.vue'
 import ServeIndicator from '../components/ServeIndicator.vue'
 
 import coinSound from '../assets/coin.mp3'
-import serveBell from '../assets/service-bell.mp3'
+import serveBell from '../assets/bell.mp3'
 
 export default {
   name: 'Dashboard',
