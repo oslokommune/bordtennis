@@ -51,14 +51,8 @@ export default {
         this.wait = false
       }, 100)
 
-      this.$refs.audio.currentTime = 0
-      this.$refs.audio.play()
-
-      if (navigator.vibrate) {
-        navigator.vibrate([100])
-      } else {
-        alert('Vibrate not supported')
-      }
+      playAudio(this.$refs.audio)
+      vibrate()
 
       if (team === 1) {
         this.teamOne = this.teamOne === 99 ? 0 : this.teamOne + 1
@@ -69,14 +63,26 @@ export default {
       this.teamTwo = this.teamTwo === 99 ? 0 : this.teamTwo + 1
     },
     switchServer() {
-      this.$refs.audioBell.currentTime = 0
-      this.$refs.audioBell.play()
+      playAudio(this.$refs.audioBell)
     },
     reset() {
       this.teamOne = 0
       this.teamTwo = 0
     },
   },
+}
+
+function playAudio(audio) {
+  audio.currentTime = 0
+  audio.play()
+}
+
+function vibrate() {
+  const canVibrate = 'vibrate' in window.navigator
+
+  if (!canVibrate) return
+
+  navigator.vibrate([100])
 }
 </script>
 
