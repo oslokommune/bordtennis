@@ -10,7 +10,7 @@
     "check": "pre-commit run --all-files"
   },
   "dependencies": {
-    "vue": "3.2.44",
+    "vue": "3.2.47",
     "vue-router": "4.1.6"
   },
   "devDependencies": {
